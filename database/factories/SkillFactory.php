@@ -1,0 +1,23 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Activity;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class SkillFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->sentence(2),
+            'activity_id' => Activity::factory(),
+        ];
+    }
+}
